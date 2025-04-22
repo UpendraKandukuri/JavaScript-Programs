@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+
+  <div class="text-center p-6 w-full max-w-md bg-white shadow-lg rounded-lg">
+    <h1 class="text-2xl font-bold mb-4" id="title">JavaScript Quiz</h1>
+
+    <div id="question" class="text-lg mb-4">Question</div>
+
+    <div id="options" class="flex flex-col space-y-2 mb-4">
+      <button id="option1" class="p-2 bg-blue-100 text-black rounded hover:bg-blue-300">Option 1</button>
+      <button id="option2" class="p-2 bg-blue-100 text-black rounded hover:bg-blue-300">Option 2</button>
+      <button id="option3" class="p-2 bg-blue-100 text-black rounded hover:bg-blue-300">Option 3</button>
+      <button id="option4" class="p-2 bg-blue-100 text-black rounded hover:bg-blue-300">Option 4</button>
+    </div>
+
+    <div id="feedback" class="mb-4 text-xl hidden"> feedBack</div>
+    <div id="result"></div>
+
+    <button id="nextBtn" class="p-2 m-2 bg-blue-500 text-white rounded hover:bg-blue-600 hidden">Next Question</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
