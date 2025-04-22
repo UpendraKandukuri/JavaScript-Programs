@@ -1,57 +1,4 @@
-const questions = [
-    {
-      question: "Which keyword is used to declare a variable in JavaScript?",
-      options: ["var", "int", "float", "string"],
-      correctAnswer: "var"
-    },
-    {
-      question: "Which method is used to write to the console in JavaScript?",
-      options: ["console.write()", "console.log()", "log.console()", "write.console()"],
-      correctAnswer: "console.log()"
-    },
-    {
-      question: "Which operator is used to assign a value to a variable?",
-      options: ["=", "==", "===", "=>"],
-      correctAnswer: "="
-    },
-    {
-      question: "Which built-in method removes the last element from an array?",
-      options: ["pop()", "remove()", "shift()", "delete()"],
-      correctAnswer: "pop()"
-    },
-    {
-      question: "How do you create a function in JavaScript?",
-      options: ["function myFunc()", "def myFunc()", "create myFunc()", "method myFunc()"],
-      correctAnswer: "function myFunc()"
-    },
-    {
-      question: "Which of the following is NOT a JavaScript data type?",
-      options: ["number", "boolean", "undefined", "character"],
-      correctAnswer: "character"
-    },
-    {
-      question: "What will `typeof null` return in JavaScript?",
-      options: ["null", "object", "undefined", "boolean"],
-      correctAnswer: "object"
-    },
-    {
-      question: "Which symbol is used for single-line comments?",
-      options: ["//", "/* */", "#", "<!-- -->"],
-      correctAnswer: "//"
-    },
-    {
-      question: "What will `2 + '2'` output in JavaScript?",
-      options: ["4", "22", "NaN", "Error"],
-      correctAnswer: "22"
-    },
-    {
-      question: "How do you call a function named `greet`?",
-      options: ["call greet()", "greet()", "function greet()", "greet.call()"],
-      correctAnswer: "greet()"
-    }
-  ];
 
-  console.log(questions.length);
 
   let title = document.getElementById('title');
   let ques = document.getElementById("question");
@@ -64,12 +11,42 @@ const questions = [
   let feedback = document.getElementById('feedback');
   let result = document.getElementById('result');
 
+  let questions = [];
+  let selectedQuestions = [];
+
   let index = 0;
   let score = 0;
 
+  function shuffleQuestions(questions) {
+    let currentIndex = questions.length;
+  
+    while (currentIndex !== 0) {
+
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+    [questions[currentIndex], questions[randomIndex]] = [questions[randomIndex],questions[currentIndex]];
+    }
+  
+    return questions;
+  }
+
+
+
+  async function getQuestions() {
+    const res = await fetch('questions.json');
+    questions = await res.json();
+    selectedQuestions = shuffleQuestions(questions).slice(0, 10);
+    console.log(selectedQuestions);
+    loadQuestion();
+  }
+
+  getQuestions();
+
   function loadQuestion() {
-      const { question, options } = questions[index];
-      ques.textContent = question;
+    
+      const { question, options } = selectedQuestions[index];
+      ques.textContent = `${index+1}. ${question}`
       opt1.textContent = options[0];
       opt2.textContent = options[1];
       opt3.textContent = options[2];
@@ -81,13 +58,11 @@ const questions = [
       opt4.disabled = false;
   }
 
-  loadQuestion();
-
   options.addEventListener('click', selectOption);
 
   function selectOption(e) {
     
-      const ques = questions[index];
+      const ques = selectedQuestions[index];
       const target = e.target;
 
       opt1.disabled = true;
@@ -108,7 +83,7 @@ const questions = [
       }
 
       index++;
-      if (index < questions.length) {
+      if (index < selectedQuestions.length) {
         nextBtn.classList.remove('hidden');
       }
 
@@ -116,14 +91,14 @@ const questions = [
   }
 
   nextBtn.addEventListener('click', function () {
-  if (index <= questions.length) {
+  if (index <= selectedQuestions.length) {
       loadQuestion();
       feedback.textContent = '';
       nextBtn.classList.add('hidden');
       console.log(index);
       
   } 
-  if(index === questions.length-1) {
+  if(index === selectedQuestions.length-1) {
       title.textContent = "Quiz Completed";
       ques.textContent = "";
       options.textContent = "";

@@ -1,0 +1,153 @@
+[
+    {
+      "question": "Which keyword is used to declare a variable in JavaScript?",
+      "options": ["var", "int", "float", "string"],
+      "correctAnswer": "var"
+    },
+    {
+      "question": "Which method is used to write to the console in JavaScript?",
+      "options": ["console.write()", "console.log()", "log.console()", "write.console()"],
+      "correctAnswer": "console.log()"
+    },
+    {
+      "question": "Which operator is used to assign a value to a variable?",
+      "options": ["=", "==", "===", "=>"],
+      "correctAnswer": "="
+    },
+    {
+      "question": "Which built-in method removes the last element from an array?",
+      "options": ["pop()", "remove()", "shift()", "delete()"],
+      "correctAnswer": "pop()"
+    },
+    {
+      "question": "How do you create a function in JavaScript?",
+      "options": ["function myFunc()", "def myFunc()", "create myFunc()", "method myFunc()"],
+      "correctAnswer": "function myFunc()"
+    },
+    {
+      "question": "Which of the following is NOT a JavaScript data type?",
+      "options": ["number", "boolean", "undefined", "character"],
+      "correctAnswer": "character"
+    },
+    {
+      "question": "What will `typeof null` return in JavaScript?",
+      "options": ["null", "object", "undefined", "boolean"],
+      "correctAnswer": "object"
+    },
+    {
+      "question": "Which symbol is used for single-line comments?",
+      "options": ["//", "/* */", "#", "<!-- -->"],
+      "correctAnswer": "//"
+    },
+    {
+      "question": "What will `2 + '2'` output in JavaScript?",
+      "options": ["4", "22", "NaN", "Error"],
+      "correctAnswer": "22"
+    },
+    {
+      "question": "How do you call a function named `greet`?",
+      "options": ["call greet()", "greet()", "function greet()", "greet.call()"],
+      "correctAnswer": "greet()"
+    },
+    {
+      "question": "What is the correct syntax to create a class in JavaScript?",
+      "options": ["class MyClass {}", "MyClass = class {}", "class = MyClass {}", "new class MyClass {}"],
+      "correctAnswer": "class MyClass {}"
+    },
+    {
+      "question": "What is the output of `typeof NaN`?",
+      "options": ["number", "NaN", "undefined", "object"],
+      "correctAnswer": "number"
+    },
+    {
+      "question": "How do you check if two values and types are equal?",
+      "options": ["==", "===", "=", "!="],
+      "correctAnswer": "==="
+    },
+    {
+      "question": "Which array method adds one or more elements to the end?",
+      "options": ["push()", "pop()", "shift()", "unshift()"],
+      "correctAnswer": "push()"
+    },
+    {
+      "question": "Which array method adds elements at the beginning?",
+      "options": ["unshift()", "push()", "pop()", "shift()"],
+      "correctAnswer": "unshift()"
+    },
+    {
+      "question": "Which event is triggered when an input value changes?",
+      "options": ["change", "input", "click", "submit"],
+      "correctAnswer": "change"
+    },
+    {
+      "question": "How do you write a comment in JavaScript?",
+      "options": ["// comment", "<!-- comment -->", "# comment", "** comment **"],
+      "correctAnswer": "// comment"
+    },
+    {
+      "question": "What does `isNaN()` do?",
+      "options": ["Checks if a value is NaN", "Converts to NaN", "Returns true for numbers", "None of these"],
+      "correctAnswer": "Checks if a value is NaN"
+    },
+    {
+      "question": "What is the result of `Boolean('')`?",
+      "options": ["false", "true", "undefined", "error"],
+      "correctAnswer": "false"
+    },
+    {
+      "question": "What is the scope of a `let` variable?",
+      "options": ["Block", "Function", "Global", "None"],
+      "correctAnswer": "Block"
+    },
+    {
+      "question": "Which keyword stops a loop?",
+      "options": ["stop", "exit", "break", "done"],
+      "correctAnswer": "break"
+    },
+    {
+      "question": "Which method converts JSON to an object?",
+      "options": ["JSON.parse()", "JSON.stringify()", "JSON.toObject()", "JSON.convert()"],
+      "correctAnswer": "JSON.parse()"
+    },
+    {
+      "question": "Which method converts an object to JSON?",
+      "options": ["JSON.stringify()", "JSON.parse()", "object.toJSON()", "toJSON()"],
+      "correctAnswer": "JSON.stringify()"
+    },
+    {
+      "question": "What does `Array.isArray([])` return?",
+      "options": ["true", "false", "undefined", "object"],
+      "correctAnswer": "true"
+    },
+    {
+      "question": "What will `true + true` return?",
+      "options": ["2", "true", "1", "NaN"],
+      "correctAnswer": "2"
+    },
+    {
+      "question": "Which keyword declares a constant variable?",
+      "options": ["const", "var", "let", "static"],
+      "correctAnswer": "const"
+    },
+    {
+      "question": "How can you make a loop that runs 5 times?",
+      "options": ["for(let i=0;i<5;i++)", "for(i=1;i<=5;i++)", "while(i<5)", "All of the above"],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "question": "Which function is used to delay execution?",
+      "options": ["setTimeout()", "setInterval()", "delay()", "wait()"],
+      "correctAnswer": "setTimeout()"
+    },
+    {
+      "question": "Which symbol is used for template literals?",
+      "options": ["`", "'", "\"", "~"],
+      "correctAnswer": "`"
+    },
+    {
+      "question": "What will `null == undefined` return?",
+      "options": ["true", "false", "NaN", "error"],
+      "correctAnswer": "true"
+    }
+  ]
+  
